@@ -35,7 +35,7 @@ export default function DayPage() {
                 <div className="bg-amber-200 min-h-screen py-10">
                   <div className="container py-10 flex flex-col gap-5 text-slate-700 relative">
                     <h2 className="text-3xl barriecito text-center">
-                      {e.day}/{e.month}/{e.year} , {index}
+                      {e.day}/{e.month}/{e.year}
                     </h2>
                     <button
                       className={`absolute top-0 right-0 barriecito cursor-pointer hover:underline ${

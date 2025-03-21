@@ -41,9 +41,19 @@ export default function GalleryPage() {
             if (giorno.images.length > 0) {
               return (
                 <>
-                  <h3 className="text-3xl barriecito ms-5">
-                    {giorno.day}/{giorno.month}/{giorno.year}
-                  </h3>
+                  <div className="flex">
+                    <h3 className="text-3xl barriecito ms-5">
+                      {giorno.day}/{giorno.month}/{giorno.year}
+                    </h3>
+                    <button
+                      className="ms-10 cursor-pointer bg-orange-500 text-white p-2 rounded px-2 py-1 "
+                      onClick={() =>
+                        (window.location.href = `/giorno/${giorno.day}/${giorno.month}/${giorno.year}`)
+                      }
+                    >
+                      Vai a questo giorno
+                    </button>
+                  </div>
                   <div className="flex flex-wrap">
                     {giorno.images.map((immagine) => {
                       return (
