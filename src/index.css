@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+.barriecito {
+  font-family: "Barriecito";
+}
+
+.kangaroo-jump {
+  animation: kangaroo-jump-animation 1s infinite alternate; /* Applica l'animazione */
+}
+
+@keyframes kangaroo-jump-animation {
+  0% {
+    transform: translateY(0); /* Posizione iniziale */
+  }
+  50% {
+    transform: translateY(-50px); /* Salto */
+  }
+  100% {
+    transform: translateY(0); /* Ritorno alla posizione iniziale */
+  }
+}
+
+.koala-animation {
+  animation: koala-sway 5s infinite alternate; /* Applica l'animazione */
+  transform-origin: bottom center; /* Punto di rotazione */
+}
+
+@keyframes koala-sway {
+  0% {
+    transform: rotate(-3deg); /* Inclinazione iniziale a sinistra */
+  }
+  50% {
+    transform: rotate(3deg); /* Inclinazione a destra */
+  }
+  100% {
+    transform: rotate(-3deg); /* Ritorno all'inclinazione iniziale */
+  }
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+/* Nessuna media query necessaria per extra small */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Extra extra large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+.custom-shadow {
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.8);
+}
