@@ -90,6 +90,7 @@ export default function DayPage() {
                           <>
                             <div className="hover:scale-98 duration-300 rounded-2xl overflow-hidden bg-red-500 w-1/4 aspect-square object-cover cursor-pointer relative">
                               <img
+                                onClick={() => setModalVideo(e)}
                                 className="absolute w-25 mx-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                                 src="https://www.gov.br/pt-br/midias-agorabrasil/play.png/@@images/image.png"
                                 alt=""
