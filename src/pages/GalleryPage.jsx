@@ -21,9 +21,8 @@ export default function GalleryPage() {
         <div className="flex justify-center items-center gap-3 py-10">
           <button
             onClick={() => zoom < 8 && setZoom(zoom + 1)}
-            className={`cursor-pointer text-4xl bg-orange-500 h-15 rounded text-white aspect-square ${
-              zoom == 8 && "opacity-50"
-            } `}
+            className={`cursor-pointer text-4xl bg-orange-500 h-15 rounded text-white aspect-square 
+              ${zoom == 8 && "opacity-50"} `}
           >
             -
           </button>
@@ -48,12 +47,30 @@ export default function GalleryPage() {
                   <div className="flex flex-wrap">
                     {giorno.images.map((immagine) => {
                       return (
-                        <img
-                          onClick={() => setModalImage(immagine)}
-                          className={`p-2 aspect-square w-1/${zoom} object-cover cursor-pointer`}
-                          src={immagine}
-                          alt=""
-                        />
+                        zoom && (
+                          <img
+                            onClick={() => setModalImage(immagine)}
+                            className={`p-2 aspect-square object-cover cursor-pointer
+                              ${
+                                zoom == 3
+                                  ? "w-1/3"
+                                  : zoom == 4
+                                  ? "w-1/4"
+                                  : zoom == 5
+                                  ? "w-1/5"
+                                  : zoom == 6
+                                  ? "w-1/6"
+                                  : zoom == 7
+                                  ? "w-1/7"
+                                  : zoom == 8
+                                  ? "w-1/8"
+                                  : ""
+                              }
+                              `}
+                            src={immagine}
+                            alt=""
+                          />
+                        )
                       );
                     })}
                   </div>
