@@ -17,7 +17,9 @@ export default function GalleryPage() {
       <div className="overflow-x-hidden mb-10 text-slate-700">
         <ImageModal image={modalImage} setmodal={setModalImage} />
         <Navbar />
-        <h1 className="text-7xl pt-10 text-center barriecito">Galleria</h1>
+        <h1 className="text-7xl pt-10 text-center barriecito">
+          Galleria {zoom}
+        </h1>
         <div className="flex justify-center items-center gap-3 py-10">
           <button
             onClick={() => zoom < 8 && setZoom(zoom + 1)}
