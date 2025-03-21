@@ -2,7 +2,7 @@ export default function HomepageDayCard(e) {
   return (
     <>
       {/* day card */}
-      <div className="bg-amber-600 text-white h-100 rounded-2xl p-10 custom-shadow   ">
+      <div className="bg-amber-600 text-white h-60 rounded-2xl p-10 custom-shadow   ">
         {/* card header */}
         <div className="flex">
           {/* date and title */}
@@ -31,7 +31,7 @@ export default function HomepageDayCard(e) {
         <div>
           <hr className="my-5" />
           <p
-            className="overflow-hidden text-ellipsis max-h-55"
+            className="overflow-hidden text-ellipsis max-h-18"
             dangerouslySetInnerHTML={{
               __html: e.content.replace(/\n/g, "<br />"),
             }}

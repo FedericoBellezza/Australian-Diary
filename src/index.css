@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+html {
+  scrollbar-color: orange #333;
+  scrollbar-width: thin;
+}
+
 .barriecito {
   font-family: "Barriecito";
 }

@@ -19,8 +19,12 @@ export default function Hero() {
           <div className="flex justify-between barriecito mt-5">
             <div></div>
             <ul className="text-2xl flex gap-5">
-              <li className="hover:underline cursor-pointer">home</li>
-              <li className="hover:underline cursor-pointer">galleria</li>
+              <li
+                onClick={() => (window.location.href = "/galleria")}
+                className="hover:underline cursor-pointer"
+              >
+                galleria
+              </li>
             </ul>
           </div>
         </div>

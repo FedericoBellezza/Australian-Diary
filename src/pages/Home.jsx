@@ -7,6 +7,7 @@ import Data from "../data/DayByDayData";
 // components import
 import Hero from "../Components/Hero";
 import HomepageDayCard from "../Components/HomepageDayCard";
+import ScrollToTopBottom from "../Components/ScrollToTopBottom";
 
 export default function Home() {
   // functions to change month and year
@@ -62,8 +63,9 @@ export default function Home() {
 
   return (
     <>
-      <div className="bg-amber-200 max-w-screen overflow-hidden h-1000">
+      <div className="bg-amber-200 min-h-screen">
         <Hero />
+        <ScrollToTopBottom />
         {/* page container */}
         <div className="container">
           {/* month selector */}
@@ -92,7 +94,7 @@ export default function Home() {
           </div>
 
           {/* cards container */}
-          <div className="flex flex-col gap-10 ">
+          <div className="flex flex-col gap-10 pb-20">
             {data.map((e, index) => {
               if (e.month == month && e.year == year) {
                 return <HomepageDayCard key={index} {...e} />;
