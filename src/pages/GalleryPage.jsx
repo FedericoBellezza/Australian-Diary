@@ -17,19 +17,23 @@ export default function GalleryPage() {
       <div className="overflow-x-hidden mb-10 text-slate-700">
         <ImageModal image={modalImage} setmodal={setModalImage} />
         <Navbar />
-        <h1 className="text-7xl pt-10 text-center barriecito">Galleria</h1>
-        <div className="flex justify-center items-center gap-3 py-10">
+
+        {/* title */}
+        <h1 className="lg:text-7xl text-5xl pt-10 text-center barriecito">
+          Galleria
+        </h1>
+        <div className="flex justify-center items-center gap-3 py-5 lg:py-10">
           <button
             onClick={() => zoom < 8 && setZoom(zoom + 1)}
-            className={`cursor-pointer text-4xl bg-orange-500 h-15 rounded text-white aspect-square 
+            className={`cursor-pointer text-4xl bg-orange-500 lg:h-15 h-10 rounded text-white aspect-square 
               ${zoom == 8 && "opacity-50"} `}
           >
             -
           </button>
-          <span className="text-2xl">Dimensioni foto</span>
+          <span className="lg:text-2xl text-xl">Dimensioni foto</span>
           <button
             onClick={() => zoom > 3 && setZoom(zoom - 1)}
-            className={`cursor-pointer text-4xl bg-orange-500 h-15 rounded  text-white aspect-square ${
+            className={`cursor-pointer lg:text-4xl bg-orange-500 lg:h-15 h-10 rounded  text-white aspect-square ${
               zoom == 3 && "opacity-50"
             } `}
           >
@@ -45,8 +49,10 @@ export default function GalleryPage() {
                     <h3 className="text-3xl barriecito ms-5">
                       {giorno.day}/{giorno.month}/{giorno.year}
                     </h3>
+
+                    {/* go to this day button */}
                     <button
-                      className="ms-10 cursor-pointer bg-orange-500 text-white p-2 rounded px-2 py-1 "
+                      className="ms-10 cursor-pointer bg-orange-500 text-white   rounded px-2 py-1 "
                       onClick={() =>
                         (window.location.href = `/giorno/${giorno.day}/${giorno.month}/${giorno.year}`)
                       }
@@ -60,7 +66,7 @@ export default function GalleryPage() {
                         zoom && (
                           <img
                             onClick={() => setModalImage(immagine)}
-                            className={`p-2 aspect-square object-cover cursor-pointer
+                            className={`lg:p-2 p-[1px] aspect-square object-cover cursor-pointer
                               ${
                                 zoom == 3
                                   ? "w-1/3"
