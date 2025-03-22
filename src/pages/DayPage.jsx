@@ -37,8 +37,10 @@ export default function DayPage() {
                     <h2 className="text-3xl barriecito text-center">
                       {e.day}/{e.month}/{e.year}
                     </h2>
+
+                    {/* next day button */}
                     <button
-                      className={`absolute top-0 right-0 barriecito cursor-pointer hover:underline ${
+                      className={`absolute top-0 right-5 lg:right-0 barriecito cursor-pointer hover:underline ${
                         index + 1 == data.length ? "hidden" : ""
                       }`}
                       onClick={() => {
@@ -51,8 +53,10 @@ export default function DayPage() {
                     >
                       Giorno successivo
                     </button>
+
+                    {/* previus day button */}
                     <button
-                      className={`absolute top-0 left-0 barriecito cursor-pointer hover:underline ${
+                      className={`absolute  left-5 top-0 lg:left-0 barriecito cursor-pointer hover:underline ${
                         index == 0 ? "hidden" : ""
                       }`}
                       onClick={() => {
@@ -65,11 +69,13 @@ export default function DayPage() {
                     >
                       Giorno precedente
                     </button>
-                    <h1 className="text-5xl barriecito text-center text-balance">
+
+                    {/* title */}
+                    <h1 className="lg:text-5xl text-2xl font-bold barriecito text-center text-balance">
                       {e.title}
                     </h1>
                     <p
-                      className="text-xl py-10  text-balance"
+                      className="text-xl lg:py-10 py-5  text-balance"
                       dangerouslySetInnerHTML={{
                         __html: e.content.replace(/\n/g, "<br />"),
                       }}
@@ -81,14 +87,14 @@ export default function DayPage() {
                             onClick={() => setModalImage(e)}
                             src={e}
                             alt=""
-                            className="w-1/4 p-1 aspect-square object-cover cursor-pointer hover:scale-98  duration-300 rounded-2xl"
+                            className="lg:w-1/4 p-1 aspect-square object-cover cursor-pointer hover:scale-98  duration-300 rounded-2xl"
                           />
                         );
                       })}
                       {e.videos.map((e) => {
                         return (
                           <>
-                            <div className="hover:scale-98 duration-300 rounded-2xl overflow-hidden bg-red-500 w-1/4 aspect-square object-cover cursor-pointer relative">
+                            <div className="hover:scale-98 duration-300 rounded-2xl overflow-hidden lg:w-1/4 aspect-square object-cover cursor-pointer relative">
                               <img
                                 onClick={() => setModalVideo(e)}
                                 className="absolute w-25 mx-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"

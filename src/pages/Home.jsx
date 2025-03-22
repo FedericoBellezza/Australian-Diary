@@ -63,7 +63,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="bg-amber-200 min-h-screen">
+      <div className="bg-amber-200 min-h-screen overflow-x-hidden">
         <Hero />
         <ScrollToTopBottom />
         {/* page container */}
